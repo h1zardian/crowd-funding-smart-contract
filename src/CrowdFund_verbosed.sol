@@ -27,7 +27,7 @@ contract CrowdFund {
     function fund() public payable {
         require(
             msg.value.getConversionRate() >= MINIMUM_USD,
-            "didn't send enough ETH"
+            "did not send enough ETH"
         );
         // because getConversionRate function from our library PriceConverter is set to be used with any of the uint256 values,
         // msg.vaule can call upon the getConversionRate function.
