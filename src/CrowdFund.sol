@@ -25,7 +25,7 @@ contract CrowdFund {
     function fund() public payable {
         require(
             msg.value.getConversionRate() >= MINIMUM_USD,
-            "didn't send enough ETH"
+            "did not send enough ETH"
         );
         fundersList.push(funderData(msg.sender, msg.value));
 
